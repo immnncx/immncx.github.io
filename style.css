@@ -128,3 +128,35 @@ footer p {display: block; padding:58px 0 0 0; text-align:center; color:#000; fon
 .entry .con {margin-left:130px; padding:58px 5px 5px 5px;}
 .commentheader p{text-align:right; padding:5px;}
 .description {float:right; font:normal 12px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:10px 10px 0 10px;}
+
+.am-u-md-3 li{
+width:400px;
+
+height:300px;
+
+padding:10px;
+
+margin: 0 10px;
+
+font-size: 100px;
+
+float: left;
+
+border:1px solid #beceeb;
+
+list-style:none;
+
+}
+
+.am-u-md-3 li img{
+display: block;
+
+width:100%;
+
+height: 100%;
+
+background-repeat: no-repeat;
+
+background-position: center;
+
+}
