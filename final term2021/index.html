@@ -1,0 +1,731 @@
+<!-- // Item -->
+
+
+
+
+
+
+
+<!-- // Links -->
+
+
+
+
+
+<!-- // Author -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Documentation</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<header class="vl-header">
+		<div class="container">
+			<h1 class="vl-header--title">
+				<img class="vl-header--icon" src="img/template/df-logo.svg"><strong> Escapium Documentation</strong>
+			</h1>
+			<p class="vl-header--subtitle"><img src="img/template/clock-circular-outline.png">Last updated: July 31st, 2018</p>
+		</div>
+	</header>
+	<!-- end .vl-header -->
+
+	<main class="vl-content">
+		<div class="container">
+
+
+			<div class="row">
+
+				<div class="col-sm-3 hidden-sm-down sidebar">
+
+					<div class="sidebar-inner">
+
+						<nav class="vl-site-nav" id="scrollspy">
+							<ul class="nav">
+								<li><a href="#welcome">Welcome</a></li>
+								<li><a href="#files-structure">Files Structure</a></li>
+								<li>
+									<a href="#html-structure">HTML Structure</a>
+									<ul class="sub-menu">
+										<li><a href="#html-structure-logo">Logo</a></li>
+										<li><a href="#html-structure-nav">Main Navigation</a></li>
+									</ul>
+								</li>
+								<li><a href="#css-structure">CSS Structure</a></li>
+								<li><a href="#js-structure">JavaScript Structure</a></li>
+								<li><a href="#gulp">Gulp</a></li>
+								<li><a href="#customization">Customization</a></li>
+								<li><a href="#fonts">Fonts</a></li>
+								<li><a href="#credits">Credits</a></li>
+							</ul>
+						</nav>
+						<!-- end .vl-site-nav -->
+
+					</div>
+
+
+				</div>
+
+				<div class="col-md-9 content">
+
+					<div class="content-inner">
+
+						<section class="vl-section" id="welcome">
+							<h2 class="vl-section--title">Welcome</h2>
+							<div class="vl-section--content">
+
+								<a target="_blank" href="https://www.instagram.com/dan.fisher.dev/" class="vl-btn vl-btn--instagram"><img src="img/template/instagram-symbol.png" alt="">Follow Us</a>
+
+								<a target="_blank" href="https://twitter.com/danfisher_dev" class="vl-btn vl-btn--twitter"><img src="img/template/twitter.png" alt="">Follow Us</a>
+
+								<a target="_blank" href="http://eepurl.com/cqgINX" class="vl-btn vl-btn--subscribe"><img src="img/template/e-mail-envelope.png" alt="">Subscribe Us</a>
+
+								<a target="_blank" href="https://danfisher.ticksy.com" class="vl-btn"><img src="img/template/help.png" alt="">Get Help</a>
+
+								<p></p>
+
+
+								<p>Thank you very much for purchasing our template. We've put a lot of hard work into it, and we hope you love it as much as we do. As far as the documentation is concerned, we have tried to cover as much as possible to help you get your new template up and running and to help you customise it.</p>
+
+								<p>If you have any questions or problems that aren't answered here, please feel free to create a new ticket on our <a href="https://danfisher.ticksy.com">support site</a>.</p>
+
+								<p>We love to hear your feedback - if you find any bugs or have suggestions for improvements please get in touch. Nearly all of the time we follow your advice and issue a rapid update to Escapium.</p>
+
+								<div class="vl-alert vl-alert--warning"><p>If you like our work, please rate it. If you’re about to rate it with less than 5 stars, please let us know the reason first and we will do our best to improve the theme. Thanks so much!</p></div>
+
+
+							</div>
+						</section>
+						<!-- end .vl-section -->
+
+						<section class="vl-section" id="files-structure">
+							<h2 class="vl-section--title">Files Structure</h2>
+							<div class="vl-section--content">
+								<p>Once downloaded, unzip the compressed folder to see the structure of the <strong>Escapium - Escape Room Game HTML Template</strong>. You'll see the folloging structure:</p>
+								
+								If you're a developer you can work with <code>source</code> folder where you can find <code>.hbs</code> (Handlebars) and <code>.scss</code> files. Please check <a href="#gulp">Gulp chapter</a>. Also you can easily work with <strong>'build'</strong> folder where you can find <code>.html</code> and <code>.css</code> to customize the template.
+								<img src="img/structure.png" alt="">
+							</div>
+						</section>
+
+						<section class="vl-section" id="html-structure">
+							<h2 class="vl-section--title">HTML Structure</h2>
+							<div class="vl-section--content">
+								<p>This template based on a responsive layout. All of the information within the main content area is nested within a body tag. The general template structure is the same throughout the template. Here is the general structure.</p>
+								
+<pre><code class="language-markup">&lt;div class="site-wrapper"&gt;
+		
+&lt;div id="js-preloader-overlay" class="preloader-overlay"&gt;
+	&lt;div id="js-preloader" class="preloader"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Overlay --&gt;
+&lt;div class="site-overlay"&gt;&lt;/div&gt;
+&lt;!-- Overlay / End --&gt;
+
+&lt;!-- Header
+================================================== --&gt;
+&lt;header id="header" class="header"&gt;
+
+	&lt;!-- Logo - Image Based --&gt;
+	&lt;div class="header__logo header__logo--img"&gt;
+		...
+	&lt;/div&gt;
+	&lt;!-- Logo - Image Based / End --&gt;
+
+	&lt;!-- Main Navigation --&gt;
+	&lt;nav class="main-nav"&gt;
+		&lt;ul class="main-nav__list"&gt;
+			&lt;li class="active"&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
+			...
+		&lt;/ul&gt;
+		
+	&lt;/nav&gt;
+	&lt;!-- Main Navigation / End --&gt;
+
+	&lt;div class="header__spacer"&gt;&lt;/div&gt;
+
+	&lt;!-- Secondary Navigation --&gt;
+	&lt;nav class="header__nav header__nav--secondary"&gt;
+
+		...
+
+	&lt;/nav&gt;
+	&lt;!-- Secondary Navigation / End --&gt;
+
+	&lt;!-- Mobile Burger Menu Icon --&gt;
+	&lt;a id="header-mobile__toggle" class="burger-menu-icon"&gt;
+		&lt;span class="burger-menu-icon__line"&gt;&lt;/span&gt;
+		&lt;span class="burger-menu-icon__line"&gt;&lt;/span&gt;
+		&lt;span class="burger-menu-icon__line"&gt;&lt;/span&gt;
+	&lt;/a&gt;
+	&lt;!-- Mobile Burger Menu Icon / End --&gt;
+
+&lt;/header&gt;
+&lt;!-- Header / End --&gt;
+
+&lt;!-- Main Slider --&gt;
+&lt;div class="main-slider-wrapper"&gt;
+	&lt;div class="main-slider js-main-slider"&gt;
+
+		...
+
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Main Slider / End --&gt;
+
+&lt;!-- Content
+================================================== --&gt;
+&lt;main class="site-content"&gt;
+	
+	&lt;!-- Section: Featured Rooms --&gt;
+	&lt;div class="section-content"&gt;
+		&lt;div class="container"&gt;
+			&lt;div class="section-heading section-heading--divider-top"&gt;
+				&lt;h2 class="section-heading__title" data-aos="fade" data-aos-duration="600"&gt;Featured Rooms&lt;/h2&gt;
+			&lt;/div&gt;
+
+			...
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Section: Featured Rooms / End --&gt;
+
+&lt;/main&gt;
+
+&lt;!-- Footer
+================================================== --&gt;
+&lt;footer id="footer" class="footer"&gt;
+
+	&lt;!-- Footer Widget --&gt;
+	&lt;div class="footer-widgets"&gt;
+		...
+	&lt;/div&gt;
+	&lt;!-- Footer Widgets / End --&gt;
+
+	&lt;!-- Footer Copyright --&gt;
+	&lt;div class="footer-copyright"&gt;
+		&lt;div class="container"&gt;
+
+			&lt;!-- Logo - Image Based --&gt;
+			&lt;div class="footer__logo footer__logo--img"&gt;
+				...
+			&lt;/div&gt;
+			&lt;!-- Logo - Image Based / End --&gt;
+
+			&lt;div class="footer-copyright__txt"&gt;
+				Copyright &copy; 2017 Escapium &nbsp;|&nbsp; All Rights Reserved
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Footer Copyright / End --&gt;
+&lt;/footer&gt;
+&lt;!-- Footer / End --&gt;
+
+&lt;!-- Search Form --&gt;
+&lt;i class="js-search-form-close search-form-close icon-close"&gt;&lt;/i&gt;
+&lt;form action="#" class="search-form-overlay"&gt;
+	...
+&lt;/form&gt;
+&lt;!-- Search Form / End --&gt;
+
+&lt;/div&gt;&lt;!-- .site-wrapper --&gt;
+</code></pre>
+								
+							</div>
+						</section>
+
+
+						<section class="vl-section" id="html-structure-logo">
+							<h2 class="vl-section--title">Logo</h2>
+							<div class="vl-section--content">
+								<p>As you can see there are two kind of logos: <strong>Text based</strong> and <strong>Image based</strong> (by default).</p>
+
+<pre class="language-markup"><code>&lt;!-- Logo - Image Based --&gt;
+&lt;div class="header__logo header__logo--img"&gt;
+	&lt;a href="index.html"&gt;&lt;img src="assets/img/logo.png" srcset="assets/img/logo@2x.png 2x" alt="Escapium Logo"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- Logo - Image Based / End --&gt;
+</code></pre>
+								
+								<p>For <strong>Text based</strong> use the following markup.</p>
+<pre class="language-markup"><code>&lt;!-- Logo Text Based --&gt;
+&lt;div class="header__logo header__logo--txt"&gt;
+	&lt;a href="#"&gt;&lt;img src="assets/img/logo-icon.svg" alt="Escapium Logo"&gt;Escapium&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- Logo Text Based / End --&gt;
+</code></pre>
+
+							</div>
+						</section>
+
+						<section class="vl-section" id="html-structure-nav">
+							<h2 class="vl-section--title">Main Navigation</h2>
+							<div class="vl-section--content">
+								<p>The page navigation links such as Home, Blog, Rooms include the next structure:</p>
+
+<pre class="language-markup"><code>&lt;!-- Main Navigation --&gt;
+&lt;nav class="main-nav"&gt;
+	&lt;ul class="main-nav__list"&gt;
+		&lt;li class="active"&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="page-about.html"&gt;about&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;features&lt;/a&gt;
+			&lt;ul class="main-nav__sub"&gt;
+				&lt;li&gt;&lt;a href="features-shortcodes.html"&gt;Shortcodes&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="features-typography.html"&gt;Typography&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="features-404.html"&gt;404 Error&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="features-faqs.html"&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;rooms&lt;/a&gt;
+			&lt;ul class="main-nav__sub"&gt;
+				&lt;li&gt;&lt;a href="room-list.html"&gt;Rooms - List&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Rooms - Grid&lt;/a&gt;
+					&lt;ul class="main-nav__sub-2"&gt;
+						&lt;li&gt;&lt;a href="room-grid-2cols.html"&gt;2 cols&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="room-grid-3cols.html"&gt;3 cols&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="room-grid-4cols.html"&gt;4 cols&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="room-grid-nomargins.html"&gt;No Margins&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a href="room-modern.html"&gt;Rooms - Modern&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="room-blocks.html"&gt;Rooms - Blocks&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="room-single.html"&gt;Single Room&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="booking-form.html"&gt;booking&lt;/a&gt;
+			&lt;ul class="main-nav__sub"&gt;
+				&lt;li&gt;&lt;a href="booking-form.html"&gt;Form&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="booking-login.html"&gt;Login&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="booking-profile.html"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="booking-appointments.html"&gt;Appointments&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="blog-right-sidebar.html"&gt;blog&lt;/a&gt;
+			&lt;ul class="main-nav__sub"&gt;
+				&lt;li&gt;&lt;a href="blog-right-sidebar.html"&gt;Blog - Right Sidebar&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="blog-left-sidebar.html"&gt;Blog - Left Sidebar&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="blog-full-width.html"&gt;Blog - Full Width&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="blog-post.html"&gt;Single Post&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="page-contacts.html"&gt;contacts&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	
+&lt;/nav&gt;
+&lt;!-- Main Navigation / End --&gt;
+</code></pre>
+
+							</div>
+						</section>
+
+						<section class="vl-section" id="css-structure">
+							<h2 class="vl-section--title">CSS Structure</h2>
+							<div class="vl-section--content">
+								<p>This is a list of the stylesheet files we've used in this template, you can find more information by opening each file:</p>
+
+								<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>File/Folder Name</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>base/</code></td>
+												<td>Includes all base styles.</td>
+											</tr>
+											<tr>
+												<td><code>blog/</code></td>
+												<td>Includes styles for blog, post part.</td>
+											</tr>
+											<tr>
+												<td><code>booked/</code></td>
+												<td>Styles for booking, profile, appointments etc.</td>
+											</tr>
+											<tr>
+												<td><code>components/</code></td>
+												<td>Styles for various template components</td>
+											</tr>
+											<tr>
+												<td><code>config/</code></td>
+												<td>Configuration styles.</td>
+											</tr>
+											<tr>
+												<td><code>content/</code></td>
+												<td>Inludes content specific styles.</td>
+											</tr>
+											<tr>
+												<td><code>mixins/</code></td>
+												<td>Template mixins.</td>
+											</tr>
+											<tr>
+												<td><code>room/</code></td>
+												<td>Includes style for Room Grid, List and Single Room.</td>
+											</tr>
+											<tr>
+												<td><code>widgets/</code></td>
+												<td>Contains styles for template widgets</td>
+											</tr>
+											<tr>
+												<td><code>booked.scss</code></td>
+												<td>Combines all stylesheets from the <code>booked/</code> folder.</td>
+											</tr>
+											<tr>
+												<td><code>style.scss</code></td>
+												<td>The main template styles.</td>
+											</tr>
+										</tbody>
+									</table>
+
+<pre class="language-markup"><code>
+</code></pre>
+
+							</div>
+						</section>
+
+
+						<section class="vl-section" id="js-structure">
+							<h2 class="vl-section--title">JS Structure</h2>
+							<div class="vl-section--content">
+								<p>Here is a list of javascript files used in this template.</p>
+
+								<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>File/Folder Name</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>jquery.min.js/code></td>
+												<td>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</td>
+											</tr>
+											<tr>
+												<td><code>bootstrap.bundle.min.js</code></td>
+												<td>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</td>
+											</tr>
+											<tr>
+												<td><code>aos.js</code></td>
+												<td>Small library to animate elements on your page as you scroll.</td>
+											</tr>
+											<tr>
+												<td><code>gmap3.min.js</code></td>
+												<td>gmap3 is the ultimate plugin to create and manage Google Maps with jQuery.</td>
+											</tr>
+											<tr>
+												<td><code>instafeed.js</code></td>
+												<td>Instafeed.js is a dead-simple way to add Instagram photos to your website.</td>
+											</tr>
+											<tr>
+												<td><code>isotope.pkgd.js</code></td>
+												<td>Filter & sort magical layouts.</td>
+											</tr>
+											<tr>
+												<td><code>jarallax.js</code></td>
+												<td>Smooth parallax scrolling effect for background images, videos and inline elements.</td>
+											</tr>
+											<tr>
+												<td><code>jPinning.js</code></td>
+												<td>jPinning is a small and simple jquery plugin to pin your headers only while the users are scrolling up.</td>
+											</tr>
+											<tr>
+												<td><code>jquery.magnific-popup.js</code></td>
+												<td>Magnific Popup is a responsive lightbox & dialog script with focus on performance and providing best experience for user with any device (for jQuery or Zepto.js)</td>
+											</tr>
+											<tr>
+												<td><code>slick.js</code></td>
+												<td>slick is a responsive carousel jQuery plugin that supports multiple breakpoints.</td>
+											</tr>
+											
+										</tbody>
+									</table>
+
+<pre class="language-markup"><code>
+</code></pre>
+
+							</div>
+						</section>
+
+						<section class="vl-section" id="gulp">
+							<h2 class="vl-section--title">Gulp</h2>
+							<div class="vl-section--content">
+
+								<h3 class="vl-section--subtitle">1. Install Node.js</h3>
+								<p>First of all, you need download and <strong>install node.js</strong> (which includes npm). <strong>npm</strong> stands for node packaged modules and is a way to manage development dependencies through Node.js. You can check it in your terminal window using these commands <code>node --version</code> and <code>npm --version</code>. You can download Node.js <a href="https://nodejs.org/en/">here</a>.</p>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">2. Install Dependencies</h3>
+								<p>Before using gulp, we need go to the template folder (<code>./HTML/</code>), installing the dependencies.</p>
+								<pre class="toc">$ npm install</pre>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">3. Gulp Installation</h3>
+								<p>Installation of Gulp is done with the command:</p>
+								<pre class="toc">$ npm install -g gulp</pre>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">4. Build project</h3>
+								<p>To build your project from the source files use next command:</p>
+								<pre class="toc">$ npm start</pre>
+
+								<div class="vl-alert vl-alert--danger"><p>Please keep in mind that <code>npm start</code> command delete and then create build/ folder again based on your source files.</p></div>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">Main Gulp Tasks</h3>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Task Name</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><code>build</code></td>
+											<td>Creates the <code>dist</code> folder by compiling all assets.</td>
+										</tr>
+										<tr>
+												<td><code>default</code></td>
+												<td>Runs the <code>build</code> and <code>server</code> tasks detailed above.</td>
+										</tr>
+										<tr>
+												<td><code>deploy</code></td>
+												<td>Runs the <code>build</code> and <code>deploy</code> tasks detailed above.</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">Core Gulp Tasks</h3>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Task Name</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+												<td><code>reset</code></td>
+												<td>Deletes the dist folder so the build can start fresh.</td>
+										</tr>
+										<tr>
+												<td><code>copy</code></td>
+												<td>Copies the necessary files from src to dist.</td>
+										</tr>
+										<tr>
+												<td><code>pages</code></td>
+												<td>Compiles Handlebars templates with Panini.</td>
+										</tr>
+										<tr>
+												<td><code>server</code></td>
+												<td>Creates a server with BrowserSync and watch for file changes.</td>
+										</tr>
+										<tr>
+												<td><code>sass</code></td>
+												<td>Compiles Sass to CSS.</td>
+										</tr>
+										<tr>
+												<td><code>js</code></td>
+												<td>Concatenate and minify JS.</td>
+										</tr>
+										<tr>
+												<td><code>lint-js</code></td>
+												<td>Check JS code for errors.</td>
+										</tr>
+										<tr>
+												<td><code>sprites</code></td>
+												<td>Creates sprites from SVG files.</td>
+										</tr>
+										<tr>
+												<td><code>img</code></td>
+												<td>Compresses images.</td>
+										</tr>
+										<tr>
+												<td><code>bootstrap</code></td>
+												<td>Compiles Bootstrap.</td>
+										</tr>
+										<tr>
+												<td><code>ftp-deploy</code></td>
+												<td>Deploy to FTP.</td>
+										</tr>
+										<tr>
+												<td><code>build</code></td>
+												<td>Creates the <code>dist</code> folder by compiling all assets.</td>
+										</tr>
+										<tr>
+												<td><code>default</code></td>
+												<td>Runs the <code>build</code> and <code>server</code> tasks detailed above.</td>
+										</tr>
+										<tr>
+												<td><code>deploy</code></td>
+												<td>Runs the <code>build</code> and <code>deploy</code> tasks detailed above.</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+						</section>
+						<!-- end .vl-section -->
+
+						<section class="vl-section" id="customization">
+							<h2 class="vl-section--title">Customization</h2>
+							<div class="vl-section--content">
+
+								<h3 class="vl-section--subtitle">How to compile Sass files</h3>
+								<div class="vl-alert vl-alert--info">
+									If you don't want to use NPM and Gulp you can simply compile only Sass/SCSS files.
+								</div>
+								<p>First, if you don’t know what is Sass you may want to take a look at <a href="http://sass-lang.com">http://sass-lang.com</a></p>
+								<p>To compile Sass files to CSS you can use next apps:</p>
+								<ol class="toc">
+									<li>Codekit <a href="https://codekitapp.com">https://codekitapp.com</a> (Mac)</li>
+									<li>Prepros <a href="https://prepros.io">https://prepros.io</a> (Mac/Windows)</li>
+									<li>Koala <a href="http://koala-app.com">http://koala-app.com</a> (Mac/Windows)</li>
+									<li>Scout <a href="https://mhs.github.io/scout-app/">https://mhs.github.io/scout-app/</a> (Mac/Windows)</li>
+								</ol>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">How to change template variables</h3>
+								<p>It's recommended to use Sass to generate your own color skin.</p>
+								<ol class="toc">
+									<li>Open <code>assets/scss/config/_variables.scss</code> in your favorite code editor.</li>
+									<li>Change the value of color variable: <code>primary: #F60B0E</code> with your own.</li>
+									<li>Compile your Sass to CSS.</li>
+								</ol>
+
+								<br>
+
+								<h3 class="vl-section--subtitle">Instagram Widget</h3>
+								<p>Instagram widget allows you to add your Instagram photos to your website.</p>
+								<p>To fetch images specifically from your account, set the get and userId options in <code>assets/js/init.js</code>:</p>
+<pre><code class="language-markup">
+var insta_feed = new Instafeed({
+	get: 'user',
+	target: 'instagram-feed',
+	userId: 'YOUR_USER_ID',
+	accessToken: 'YOUR_ACCESS_TOKEN',
+	limit: 6,
+	template: '&lt;li class="widget-instagram__item"&gt;&lt;a href="{{link}}" id="{{id}}" class="widget-instagram__link-wrapper" target="_blank"&gt;&lt;span class="widget-instagram__plus-sign"&gt;&lt;img src="{{image}}" alt="" class="widget-instagram__img" /&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;'
+});</code></pre>
+								<div class="vl-alert vl-alert--info">
+									Note: <strong>YOUR_USER_ID</strong> option corresponds to your Instagram account ID (eg: 4385108), not your username. If you do not know your account ID, do a quick google search for <a href="https://google.com/search?q=What%20is%20my%20Instagram%20account%20ID%3F">"What is my Instagram account ID?"</a>. There a several free tools available online that will look it up for you, for example <a href="https://smashballoon.com/instagram-feed/find-instagram-user-id/">this one</a>.
+								</div>
+
+								<div class="vl-alert vl-alert--info">
+									Note: <strong>YOUR_ACCESS_TOKEN</strong> (Instagram Access Token) is a long string of characters unique to your account that grants other applications access to your Instagram feed. In order to display your Instagram photos on your own website, you are required to provide an Instagram Access Token. There a several free tools available online that will look it up for you, for example <a href="http://instagram.pixelunion.net">this one</a>.
+								</div>
+
+							</div>
+						</section>
+						<!-- end .vl-section -->
+
+						<section class="vl-section" id="fonts">
+							<h2 class="vl-section--title">Fonts</h2>
+							<div class="vl-section--content">
+								<p>We've used various types of fonts in this template.</p>
+								<h6>Web Fonts</h6>
+								<ul class="toc">
+									<li><strong>Hind</strong> (Google Web Font: <a href="https://fonts.google.com/specimen/Hind">https://fonts.google.com/specimen/Hind</a>)</li>
+									<li><strong>Montserrat</strong> (Google Web Font: <a href="https://fonts.google.com/specimen/Montserrat">https://fonts.google.com/specimen/Montserrat</a>)</li>
+								</ul>
+								<h6>Icons</h6>
+								<ul class="toc">
+									<li><strong>Simple Line Icons</strong> <a href="http://simplelineicons.com">http://simplelineicons.com</a></li>
+									<li><strong>Ionicons</strong> <a href="http://ionicons.com">http://ionicons.com</a></li>
+									<li><strong>FontAwesome</strong> <a href="https://fortawesome.github.io/Font-Awesome">https://fortawesome.github.io/Font-Awesome</a></li>
+								</ul>
+							</div>
+						</section>
+						<!-- end .vl-section -->
+
+						<section class="vl-section" id="credits">
+							<h2 class="vl-section--title">Credits</h2>
+							<div class="vl-section--content">
+								<h6>JavaScript</h6>
+								<ul class="toc">
+									<li>jQuery <a href="https://jquery.com">https://jquery.com</a></li>
+									<li>Bootstrap <a href="http://getbootstrap.com">http://getbootstrap.com</a></li>
+									<li>Isotope <a href="http://isotope.metafizzy.co">http://isotope.metafizzy.co</a></li>
+									<li>Slick <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></li>
+									<li>Jarallax <a href="https://github.com/nk-o/jarallax">https://github.com/nk-o/jarallax</a></li>
+									<li>jPinning <a href="http://juciccio.github.io/jPinning/">http://juciccio.github.io/jPinning/</a></li>
+									<li>Instafeed.js <a href="http://instafeedjs.com">http://instafeedjs.com</a></li>
+									<li>Magnific Popup <a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a></li>
+									<li>AOS <a href="https://github.com/michalsnik/aos">https://github.com/michalsnik/aos</a></li>
+								</ul>
+
+								<h6>Images</h6>
+								<ul class="toc">
+									<li>Unsplash - <a href="https://unsplash.com">https://unsplash.com</a></li>
+									<li>Envato Elements <a href="https://elements.envato.com">https://elements.envato.com</a></li>
+								</ul>
+							</div>
+						</section>
+						<!-- end .vl-section -->
+
+
+						<section class="vl-section">
+
+							<h4>Don`t forget to rate it <img src="img/template/rate.png" alt="" class="rate"> <img src="img/template/rate.png" alt="" class="rate"> <img src="img/template/rate.png" alt="" class="rate"> <img src="img/template/rate.png" alt="" class="rate"> <img src="img/template/rate.png" alt="" class="rate"></h4>
+
+							<p></p>
+
+							<a target="_blank" href="https://www.instagram.com/dan.fisher.dev/" class="vl-btn vl-btn--instagram"><img src="img/template/instagram-symbol.png" alt="">Follow Us</a>
+
+							<a target="_blank" href="https://twitter.com/danfisher_dev" class="vl-btn vl-btn--twitter"><img src="img/template/twitter.png" alt="">Follow Us</a>
+
+							<a target="_blank" href="http://eepurl.com/cqgINX" class="vl-btn vl-btn--subscribe"><img src="img/template/e-mail-envelope.png" alt="">Subscribe Us</a>
+
+							<a target="_blank" href="https://danfisher.ticksy.com" class="vl-btn"><img src="img/template/help.png" alt="">Get Help</a>
+
+						</section>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+	</main>
+
+
+
+	<footer class="vl-footer">
+		<div class="container">
+			<p>Cheers &amp; Thanks again for your purchase! Powered by <a href="http://themeforest.net/user/dan_fisher" target="_blank">Dan Fisher</a></p>
+		</div>
+	</footer>
+
+
+
+</body>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/theia-sticky-sidebar.js"></script>
+<script src="js/prism-min.js"></script>
+<script src="js/script.js"></script>
+</html>
